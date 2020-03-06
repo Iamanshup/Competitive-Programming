@@ -28,12 +28,12 @@ void buildTree(vector<int> &a, vector<int> &segTree, int low, int high, int pos)
   segTree[pos] = segTree[2 * pos + 1] + segTree[2 * pos + 2];
 }
 
-int query(vector<int> segTree, int qlow, int qhigh, int low, int high, int pos)
+int query(vector<int> &segTree, int qlow, int qhigh, int low, int high, int pos)
 {
   if (qlow <= low and qhigh >= high) // total,overlap
     return segTree[pos];
   if (qlow > high or qhigh < low) // no overlap
-    return LONG_MAX;
+    return 0;
 
   int mid = low + (high - low) / 2;
   return query(segTree, qlow, qhigh, low, mid, 2 * pos + 1) + query(segTree, qlow, qhigh, mid + 1, high, 2 * pos + 2);
