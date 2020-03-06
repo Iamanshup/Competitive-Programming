@@ -28,7 +28,7 @@ void buildTree(vector<int> &a, vector<int> &segTree, int low, int high, int pos)
   segTree[pos] = min(segTree[2 * pos + 1], segTree[2 * pos + 2]);
 }
 
-int query(vector<int> segTree, int qlow, int qhigh, int low, int high, int pos)
+int query(vector<int> &segTree, int qlow, int qhigh, int low, int high, int pos)
 {
   if (qlow <= low and qhigh >= high) // total,overlap
     return segTree[pos];
@@ -80,8 +80,9 @@ int main()
     cin >> a[i];
   }
 
-  int k = 2 * ceil(log2(n)) - 1;
-  vector<int> segTree(k, LONG_MAX);
+  int k = 2 = ceil(log2(n));
+  int size = 2 * (1 << k) - 1;
+  vector<int> segTree(size, LONG_MAX);
 
   buildTree(a, segTree, 0, n - 1, 0);
 
