@@ -37,7 +37,7 @@ int lca(vector<int>& T, vector<vector<int>>& P, int u, int v)
 {
    if (level[u] < level[v])
       swap(u, v);
-   int log = log2(u);
+   int log = log2(level[u]);
 
    for (int i = log; i >= 0; --i)
    {
