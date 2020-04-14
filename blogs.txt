@@ -1,0 +1,5 @@
+Segment Trees - https://codeforces.com/blog/entry/18051
+
+Mo's Algorithm - https://www.hackerearth.com/practice/notes/mos-algorithm/
+
+Mo's Algorithm on Trees - https://codeforces.com/blog/entry/43230
