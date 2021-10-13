@@ -26,6 +26,7 @@ void solve()
 		cout << n / 2 - 1 << endl;
 }
 
+
 int32_t main()
 {
 #ifndef ONLINE_JUDGE
