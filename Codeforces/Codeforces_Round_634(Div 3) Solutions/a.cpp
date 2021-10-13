@@ -13,6 +13,7 @@ using namespace std;
 #define PI        3.14159265359
 #define MAXN      1000007
 
+
 const int mod = 1e9 + 7;
 
 void solve()
