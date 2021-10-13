@@ -31,6 +31,7 @@ void solve()
 	}
 
 	int g1 = mp.size() - 1;
+	
 
 	if (abs(g2 - g1) <= 1)
 	{
